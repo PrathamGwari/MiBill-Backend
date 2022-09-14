@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const UserSchema = mongoose.Schema({
+const OperatorSchema = mongoose.Schema({
     username: {
         type: String,
         required: true
@@ -16,4 +16,4 @@ const UserSchema = mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('User', UserSchema)
+module.exports = mongoose.model('Operator', OperatorSchema)
