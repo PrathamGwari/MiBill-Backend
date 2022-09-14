@@ -13,6 +13,10 @@ const StoreSchema = mongoose.Schema({
         type: String,
         required: true,
         unique: true
+    },
+    operatorId: {
+        type: String,
+        required: true
     }
 }, {timestapms: true})
 
