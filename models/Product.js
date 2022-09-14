@@ -7,7 +7,6 @@ const ProductSchema = mongoose.Schema({
     },
     storeId: {
         type: Array,
-        required: true
     },
     imageURL: {
         type: String,
@@ -27,4 +26,4 @@ const ProductSchema = mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Store', ProductSchema)
+module.exports = mongoose.model('Product', ProductSchema)
