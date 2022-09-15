@@ -1,7 +1,8 @@
+require('dotenv').config()
+
 const router = require('express').Router()
 const {upload, s3} = require('../middleware/middleware')
-const dotenv = require('dotenv')
-dotenv.config()
+
 
 router.post('/upload', upload.single('file'), async(req, res) => {
     console.log(req.file)

@@ -12,6 +12,8 @@ const storageRoute = require('./routes/storage')
 const storeRoute = require('./routes/store')
 const productRoute = require('./routes/product')
 const paymentRoute = require('./routes/payment')
+const ordersRoute = require('./routes/order')
+const emailRoute = require('./routes/email')
 
 app.use(cors())
 app.use(express.json())
@@ -26,7 +28,8 @@ app.use('/api/storage', storageRoute)
 app.use('/api/store', storeRoute)
 app.use('/api/product', productRoute)
 app.use('/api/payment', paymentRoute)
-
+app.use('/api/orders', ordersRoute)
+app.use('/api/email', emailRoute)
 
 app.listen(process.env.PORT, ()=>{
     console.log('backend is running on port 8000')
