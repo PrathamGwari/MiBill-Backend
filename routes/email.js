@@ -13,7 +13,6 @@ const transporter = nodemailer.createTransport({
 })
 
 router.post('/sendemail', upload.single('file'), async (req, res) => {
-
     let mailOptions = {
         from: process.env.EMAIL_ID,
         to: req.body.to,
@@ -21,7 +20,7 @@ router.post('/sendemail', upload.single('file'), async (req, res) => {
         text: req.body.body,
         attachments: [
             {
-                path: req.file.path
+                path: req.file.location
             }
         ]
     }
