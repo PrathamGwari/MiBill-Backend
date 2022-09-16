@@ -19,7 +19,7 @@ router.get('/:id', async (req, res) => {
     }
 })
 
-router.get('/:storeId', async (req, res) => {
+router.get('/store/:storeId', async (req, res) => {
     try {
         const storeId = req.params.storeId
         const orders = await Order.find({storeId})
