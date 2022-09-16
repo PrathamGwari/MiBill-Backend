@@ -21,7 +21,19 @@ const OrderSchema = mongoose.Schema({
         type: Number,
         required: true
     },
-    customerId: {
+    customerName: {
+        type: String,
+        required: true
+    },
+    customerEmail: {
+        type: String,
+        required: true
+    },
+    customerAddress: {
+        type: String,
+        required: true
+    },
+    customerPhoneNumber: {
         type: String,
         required: true
     }
