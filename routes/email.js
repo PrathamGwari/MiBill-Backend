@@ -26,7 +26,7 @@ router.post('/sendemail', upload.single('file'), async (req, res) => {
             }
         ]
     }
-
+    
     transporter.sendMail(mailOptions, function(err, info) {
         if(err) res.status(200).json({err})
         else res.status(200).json({
