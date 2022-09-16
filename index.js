@@ -31,6 +31,6 @@ app.use('/api/payment', paymentRoute)
 app.use('/api/orders', ordersRoute)
 app.use('/api/email', emailRoute)
 
-app.listen(process.env.PORT, ()=>{
+app.listen(process.env.PORT || 8000, ()=>{
     console.log('backend is running on port 8000')
 })
