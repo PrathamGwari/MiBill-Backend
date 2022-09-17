@@ -37,6 +37,24 @@ router.get('/store/:storeId', async (req, res) => {
     }
 })
 
+router.get('/operator/:operatorId', async (req, res) => {
+    try {
+        const operatorId = req.params.operatorId
+        const orders = await Order.find({operatorId})
+
+        if(orders) res.status(200).json({
+            message: "SUCCESS",
+            orders
+        })
+        else res.status(400).json({
+            message: "NO ORDER FOUND!"
+        })
+
+    } catch(err) {
+        res.status(500).json({err})
+    }
+})
+
 router.post('/', async (req, res) => {
     try {
         const {
